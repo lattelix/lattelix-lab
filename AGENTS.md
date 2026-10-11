@@ -47,7 +47,7 @@ Do not remove existing /designs prototypes or flatten independent design experie
 
 - content/site.ts — canonical site data; .com delivery is confirmed by the owner. See docs/plan.md for service audit evidence and release status.
 - app/page.tsx, components/site/living-scene.tsx, app/globals.css — current cinematic landscape.
-- app/cv/page.tsx — current public CV. New EN/RU CV, language switch and Download PDF are prepared locally in app/ru/cv/page.tsx, components/site/cv-profile.tsx, content/cv.ts and public/cv. On 2026-10-11 the owner explicitly held PDF publication to provide revised files; keep this whole download slice local until then. See docs/plan.md for release status.
+- app/cv/page.tsx, app/ru/cv/page.tsx, components/site/cv-profile.tsx, content/cv.ts — EN/RU CV with language switch and Download PDF; assets in public/cv. On 2026-10-11 the owner supplied revised PDFs and explicitly authorized publication, superseding the earlier hold. Preserve those PDF bytes and layout. See docs/plan.md for checks and release status.
 - app/designs/* — noindex design experiments, not a finished switching system.
 - app/works/*, app/tools/*, app/games/*, app/music/* — real content/product surfaces.
 - next.config.mjs, components/site/legacy-domain-notice.tsx — .ru -> .com migration and dismissible visitor notice.

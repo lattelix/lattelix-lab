@@ -12,6 +12,7 @@ import { ThemeToggle } from '@/components/site/theme-toggle'
 export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const cvHref = pathname === '/ru/cv' ? '/ru/cv' : '/cv'
 
   return (
     <header className="site-header">
@@ -24,10 +25,11 @@ export function SiteHeader() {
 
       <nav aria-label="Primary navigation" className="desktop-nav">
         {navItems.map((item) => {
-          const active = pathname === item.href
+          const href = item.href === '/cv' ? cvHref : item.href
+          const active = pathname === href
 
           return (
-            <Link aria-current={active ? 'page' : undefined} href={item.href} key={item.href}>
+            <Link aria-current={active ? 'page' : undefined} href={href} key={item.href}>
               {item.label}
             </Link>
           )
@@ -51,9 +53,15 @@ export function SiteHeader() {
         <nav aria-label="Mobile navigation" className="mobile-nav">
           {navItems.map((item) => {
             const Icon = item.icon
+            const href = item.href === '/cv' ? cvHref : item.href
 
             return (
-              <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>
+              <Link
+                aria-current={pathname === href ? 'page' : undefined}
+                href={href}
+                key={item.href}
+                onClick={() => setOpen(false)}
+              >
                 <Icon aria-hidden="true" size={18} />
                 {item.label}
               </Link>

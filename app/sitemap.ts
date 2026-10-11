@@ -1,13 +1,17 @@
 import type { MetadataRoute } from 'next'
 
+import { cvLanguageAlternates } from '@/content/cv'
 import { games, posts, projects, site } from '@/content/site'
 
-const staticRoutes = ['', '/cv', '/works', '/posts', '/tools', '/tools/images', '/tools/files', '/tools/dev', '/tools/qr-code', '/games', '/music']
+const staticRoutes = ['', '/cv', '/ru/cv', '/works', '/posts', '/tools', '/tools/images', '/tools/files', '/tools/dev', '/tools/qr-code', '/games', '/music']
 const dynamicRoutes = [
   ...projects.map((project) => `/works/${project.slug}`),
   ...posts.map((post) => `/posts/${post.slug}`),
   ...games.map((game) => `/games/${game.slug}`),
 ]
+const cvLanguages = Object.fromEntries(
+  Object.entries(cvLanguageAlternates).map(([language, path]) => [language, `https://${site.domain}${path}`]),
+)
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...staticRoutes, ...dynamicRoutes].map((route) => ({
@@ -15,5 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     priority: route === '' ? 1 : 0.7,
     url: `https://${site.domain}${route}`,
+    alternates: route === '/cv' || route === '/ru/cv' ? { languages: cvLanguages } : undefined,
   }))
 }
