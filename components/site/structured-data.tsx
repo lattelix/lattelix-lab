@@ -23,7 +23,7 @@ export function StructuredData() {
         email: `mailto:${site.email}`,
         jobTitle: site.role,
         knowsAbout,
-        name: site.name,
+        name: site.ownerName,
         sameAs,
         url: `https://${site.domain}`,
       },

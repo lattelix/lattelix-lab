@@ -141,12 +141,21 @@
   border-radius: 0.35rem;
   color: hsl(var(--background));
   display: inline-flex;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 700;
+  flex: 0 0 auto;
   height: 1.75rem;
   justify-content: center;
   width: 1.75rem;
+}
+
+.brand-mark svg {
+  display: block;
+  height: 1.25rem;
+  width: 1.55rem;
+}
+
+.brand-wordmark {
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 .desktop-nav {
@@ -1267,7 +1276,7 @@
     width: 100%;
   }
 
-  .brand-lockup span:last-child {
+  .brand-wordmark {
     display: none;
   }
 

@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 import { site } from '@/content/site'
+import { BrandMark } from '@/components/site/brand-mark'
 
 export const alt = site.title
 export const contentType = 'image/png'
@@ -48,7 +49,7 @@ export default function Image() {
               width: 72,
             }}
           >
-            LX
+            <BrandMark color="#f9ffef" size={52} />
           </div>
           <span>{site.domain}</span>
         </div>

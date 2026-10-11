@@ -14,12 +14,13 @@ import {
 
 export const site = {
   domain: 'lattelix.com',
-  name: 'Lattelix',
-  title: 'Lattelix — living web systems, interfaces and experiments',
+  name: 'Lattelix Lab',
+  ownerName: 'Lattelix',
+  title: 'Lattelix Lab — living web systems, interfaces and experiments',
   description:
     'Personal hub for full-stack interfaces, data-heavy products, games, engineering notes and selected work.',
-  email: 'hello@lattelix.ru',
-  careerEmail: 'career@lattelix.ru',
+  email: 'hello@lattelix.com',
+  careerEmail: 'career@lattelix.com',
   githubUsername: 'lattelix',
   role: 'Frontend, full-stack and data engineer',
   summary:
@@ -139,7 +140,7 @@ export const experience = [
 export const projects = [
   {
     slug: 'personal-hub',
-    name: 'Personal Hub',
+    name: 'Lattelix Lab',
     type: 'Identity system',
     status: 'In build',
     description:

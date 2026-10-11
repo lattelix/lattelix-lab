@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 import { RoutePage } from '@/components/site/route-page'
-import { designVariants } from '@/content/site'
+import { designVariants, site } from '@/content/site'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata = createPageMetadata({
-  description: 'Alternative design directions for Lattelix.',
+  description: `Alternative design directions for ${site.name}.`,
   noIndex: true,
   path: '/designs',
   title: 'Design Lab',

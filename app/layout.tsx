@@ -11,11 +11,12 @@ import './globals.css'
 
 export const metadata: Metadata = {
   applicationName: site.name,
-  authors: [{ name: site.name, url: `https://${site.domain}` }],
+  authors: [{ name: site.ownerName, url: `https://${site.domain}` }],
   category: 'technology',
-  creator: site.name,
+  creator: site.ownerName,
   keywords: [
-    'Lattelix',
+    site.name,
+    site.ownerName,
     'frontend engineer',
     'full-stack engineer',
     'Next.js',

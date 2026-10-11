@@ -3,7 +3,7 @@ import { availability, contactLinks, experience, focusAreas, proofPoints, site, 
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata = createPageMetadata({
-  description: `CV and engineering profile for ${site.name}.`,
+  description: `CV and engineering profile for ${site.ownerName}.`,
   path: '/cv',
   title: 'CV',
 })

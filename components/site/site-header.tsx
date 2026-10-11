@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 import { navItems, site } from '@/content/site'
+import { BrandMark } from '@/components/site/brand-mark'
 import { ThemeToggle } from '@/components/site/theme-toggle'
 
 export function SiteHeader() {
@@ -14,9 +15,11 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link aria-label="Lattelix home" className="brand-lockup" href="/">
-        <span className="brand-mark">LX</span>
-        <span>{site.domain}</span>
+      <Link aria-label={`${site.name} home`} className="brand-lockup" href="/">
+        <span className="brand-mark">
+          <BrandMark />
+        </span>
+        <span className="brand-wordmark">{site.name}</span>
       </Link>
 
       <nav aria-label="Primary navigation" className="desktop-nav">
